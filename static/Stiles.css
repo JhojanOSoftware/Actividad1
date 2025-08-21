@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica', Arial, sans-serif;
+    background: #f5f6fa;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #1a237e;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(30, 42, 126, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 6px 24px rgba(30, 42, 126, 0.18);
+    transform: scale(1.04);
+}
+
+.thumbnail {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 14px 14px 0 0;
+    margin-bottom: 16px;
+}
+
+.world-name {
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Paleta de colores sobria */
+.card p {
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 8px;
+    }
+    h1 {
+        font-size: 1.3rem;
+        margin-top: 18px;
+        margin-bottom: 12px;
+    }
+}
