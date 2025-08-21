@@ -70,7 +70,11 @@ const planetId = params.get('id');
 const container = document.getElementById("planet-detail");
 const planeta = planetas.find(p => String(p.id) === planetId);
 if (planeta) {
-  container.textContent = planeta.description;
+  container.innerHTML = `
+    <h2>${planeta.name}</h2>
+    <img src="${planeta.image}" alt="${planeta.name}" style="max-width:300px;display:block;margin-bottom:1em;">
+    <p>${planeta.description}</p>
+  `;
 } else {
   container.textContent = "No se encontró información para este planeta.";
 }

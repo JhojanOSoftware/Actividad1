@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Detalle del Planeta Dragon Ball</title>
-    <link rel="stylesheet" href="../static/Stiles2.css">
+  <meta charset="UTF-8">
+  <title>Detalle del Planeta</title>
+  <link rel="stylesheet" href="../static/Stiles2.css">
 </head>
 <body>
-    <h1 id="planet-title">Detalle del Planeta</h1>
-    <div id="planet-detail" class="planet-detail-container">
-        <!-- Aquí se mostrará la información del planeta -->
+  <header>
+    <h1>Dragon Ball Z - Planeta</h1>
+  </header>
+
+  <main>
+    <!-- Aquí se cargará la información del planeta -->
+    <div id="planet-detail" class="planet-detail">
+      <!-- El contenido se inserta dinámicamente por detalle.js -->
+      <noscript>
+        <p>Activa JavaScript para ver el detalle del planeta.</p>
+      </noscript>
     </div>
-    <a href="index.html">Volver a la galería</a>
-    <script src="../static/detalle.js"></script>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dragon Ball Z Fan Page</p>
+    <a href="index.html">Volver al inicio</a>
+  </footer>
+
+  <!-- Conexión al JS -->
+  <script src="../static/js/detalle.js"></script>
 </body>
 </html>
